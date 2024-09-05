@@ -105,6 +105,12 @@ taskList.addEventListener("click", function (event) {
     // Remove the checked data from local storage
     if (event.target.previousSibling.previousSibling.children[0].checked) {
       localStorage.removeItem("checked" + currentIndex);
+      for (let index = currentIndex + 1; index < storageItemLength; index++) {
+        if (ul.children[index].children[0].children[0].checked) {
+          localStorage.removeItem(`checked${index}`);
+          localStorage.setItem(`checked${index - 1}`, index - 1);
+        }
+      }
     }
 
     // Reduce the checked data index from local storage
