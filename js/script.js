@@ -6,13 +6,13 @@ const ul = document.querySelector(".task-list ul");
 taskInput.addEventListener("keypress", function (event) {
   // If the user presses the Enter key
   if (event.key == "Enter") {
-    // Trigger the button click to add task
+    // Trigger the add button click to add task
     addTaskBtn.click();
   }
 });
 
 addTaskBtn.addEventListener("click", function () {
-  if (taskInput.value == "") {
+  if (taskInput.value.trim() == "" || null) {
     // Show alert if input isn't filled
     alert("Please fill the input!");
   } else {
@@ -29,10 +29,10 @@ addTaskBtn.addEventListener("click", function () {
     let storageItemLength = parseInt(localStorage.getItem("length"));
 
     // Add new task if input is filled
-    task(storageItemLength, taskInput.value);
+    task(storageItemLength, taskInput.value.trim());
 
     // Save the task to local storage
-    localStorage.setItem(`value${storageItemLength}`, taskInput.value);
+    localStorage.setItem(`value${storageItemLength}`, taskInput.value.trim());
 
     // Clear the input field
     taskInput.value = "";
@@ -202,3 +202,22 @@ if (parseInt(localStorage.getItem("length")) != 0) {
     }
   }
 }
+
+// Event listener if storage changed manually
+addEventListener("storage", () => {
+  if (localStorage.getItem("length") == null && ul.children.length != 0) {
+    // if the task length has been deleted from localstorage, clear all localStorage object item and then refresh the browser
+    localStorage.clear();
+    location.reload();
+  }
+
+  // if the task has been deleted from localstorage, trigger the remove button click to remove selected item and then refresh the browser
+  for (index = 0; index < parseInt(localStorage.getItem("length")); index++) {
+    if (localStorage.getItem(`value${index}`) == null) {
+      ul.children[index].children[2].click();
+      location.reload();
+    }
+  }
+
+  location.reload();
+});
