@@ -1,18 +1,7 @@
 # Proyek To-do List
 Ini adalah aplikasi daftar tugas sederhana yang memungkinkan pengguna untuk menambah, menghapus, dan menandai tugas sebagai selesai. Proyek ini dibuat menggunakan HTML, CSS, dan JavaScript, dan menggunakan penyimpanan local stroage dari browser untuk menyimpan tugas.
 
-## Cara Menggunakan (Clone Proyek)
-Untuk menjalankan proyek ini secara lokal, Anda dapat meng-clone repositori ini dari GitHub.
-1.  Buka terminal atau command prompt.
-2.  Gunakan perintah berikut untuk meng-clone repositori:
-    ```bash
-    git clone https://github.com/idrmdhni/To-do-list.git
-    ```
-3.  Setelah proses clone selesai, buka folder proyek.
-4.  Buka file `index.html` di browser untuk memulai aplikasi.
-
 ## Fitur
-
 * **Tambah Tugas Baru:** Pengguna dapat menambahkan tugas baru ke dalam daftar.
 * **Hapus Tugas:** Tugas dapat dihapus dari daftar.
 * **Tandai Selesai:** Tugas dapat ditandai sebagai selesai, yang akan mencoret teks tugas tersebut.
@@ -23,6 +12,16 @@ Untuk menjalankan proyek ini secara lokal, Anda dapat meng-clone repositori ini 
 * **HTML:** Struktur dasar dari aplikasi web.
 * **CSS:** Untuk penataan dan desain antarmuka pengguna.
 * **JavaScript:** Untuk fungsionalitas inti dari aplikasi.
+
+## Cara Menjalankan Proyek
+Untuk menjalankan proyek ini secara lokal, Anda dapat meng-clone repositori ini dari GitHub.
+1.  Buka terminal atau command prompt.
+2.  Gunakan perintah berikut untuk meng-clone repositori:
+    ```bash
+    git clone https://github.com/idrmdhni/To-do-list.git
+    ```
+3.  Setelah proses clone selesai, buka folder proyek.
+4.  Buka file `index.html` di browser untuk memulai aplikasi.
 
 ## Cara Menggunakan Aplikasi
 1.  Buka file `index.html`.
